@@ -4,7 +4,7 @@ const TodoForm = (props) => {
     const [inputText, setInputText] = useState('');
 
     const handleChanges = event => {
-        setInputText(event.target.value)
+        setInputText(event.target.value);
     }
 
     return (
@@ -16,7 +16,8 @@ const TodoForm = (props) => {
                     name='task'
                     value={inputText}
                     placeholder='...add task'
-                    autoComplete={handleChanges}
+                    autoComplete='off'
+                    onChange={handleChanges}
                 />
                 <button
                     className='buttons'
