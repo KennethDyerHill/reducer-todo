@@ -5,7 +5,7 @@ export const initialState = [
       id: 3892987589
   },
   {
-      item: 'Pet all the puppos',
+      item: 'Pet all the sneks',
       completed: false,
       id: 4857295031
   },
@@ -17,7 +17,6 @@ export const initialState = [
 ]
 
 export const reducer = (state, action) => {
-  // console.log(state, action);
   switch (action.type) {
       case 'ADD_TASK':
           return [
@@ -30,7 +29,6 @@ export const reducer = (state, action) => {
           ]
       case 'TOGGLE_TASK':
           return state.map(todo => {
-              // console.log(todo.id, action.payload);
               if (todo.id === action.payload) {
                   return {...todo, completed: !todo.completed}     
               }else{
@@ -45,4 +43,6 @@ export const reducer = (state, action) => {
       default:
           return state;
   }
-}
+};
+
+export default reducer;
